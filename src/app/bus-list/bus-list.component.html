@@ -1,0 +1,10 @@
+<ul class="busses">
+  <li *ngFor="let bus of busses">
+	<span class="badge"><img src="assets/images/{{ bus.icon }}" class="busicon" /></span>
+	<div class="businfo">
+	  <label>{{ bus.bus }}</label>
+	  <label>{{ bus.timing }}</label>
+	  <label>{{ bus.direction }}</label>
+	</div>
+  </li>
+</ul>
