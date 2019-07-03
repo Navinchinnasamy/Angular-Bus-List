@@ -30,7 +30,8 @@
 }
 
 .businfo label {
-	display: block;
+  display: block;
+  padding: 0.2em;
 }
 
 .busses .badge {
@@ -50,4 +51,18 @@
 
 .busicon {
 	width: 100%;
+}
+
+#bus-filter {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.bus-name {
+  font-weight: bold;
+  font-size: large;
+}
+
+.bus-time, .bus-direction {
+  font-size: large;
 }

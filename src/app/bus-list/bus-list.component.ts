@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Bus } from '../bus';
-import BussesList from '../../assets/busses.json';
+var BussesList = require('../../assets/busses.json');
 
 @Component({
   selector: 'app-bus-list',
@@ -9,13 +9,17 @@ import BussesList from '../../assets/busses.json';
 })
 export class BusListComponent implements OnInit {
 
+  searchText: String = "";
   busses: Bus[] = BussesList;
 
-  constructor() { 
-    console.log(BussesList);
+  constructor() {
   }
 
   ngOnInit() {
+  }
+  
+  onKey(event: any) { // without type info
+    this.searchText = event.target.value;
   }
 
 }
