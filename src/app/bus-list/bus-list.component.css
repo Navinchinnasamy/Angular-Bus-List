@@ -1,68 +1,13 @@
 /* Bus List component's private CSS styles */
-
-.busses {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 15em;
-}
-
-.busses li {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  border-radius: 4px;
-}
-
-.busses li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
-}
-
-.busses .businfo {
-  display: inline-block;
-  font-size: small;
-  line-height: 1em;
-}
-
-.businfo label {
-  display: block;
-  padding: 0.2em;
-}
-
-.busses .badge {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  background-color: #607D8B;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  width: 5em;
-  height: 4em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
-}
-
 .busicon {
-	width: 100%;
+    width: 100%;
 }
 
-#bus-filter {
-  padding: 5px;
-  margin-bottom: 5px;
+h4.card-title {
+    font-size: 1.1rem;
 }
 
-.bus-name {
-  font-weight: bold;
-  font-size: large;
-}
-
-.bus-time, .bus-direction {
-  font-size: large;
+.card-header {
+    margin-bottom: 10px;
+    height: 27vh;
 }
