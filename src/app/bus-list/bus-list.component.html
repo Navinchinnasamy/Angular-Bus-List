@@ -1,6 +1,6 @@
 <input (keyup)="onKey($event)" placeholder="search text goes here" id="bus-filter" />
 <ul class="busses">
-  <li *ngFor="let bus of busses | filter : searchText">
+  <li *ngFor="let bus of buses | filter : searchText">
 	<span class="badge"><img src="assets/images/{{ bus.icon }}" class="busicon" /></span>
 	<div class="businfo">
 	  <label class="bus-name">{{ bus.bus }}</label>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Bus } from '../bus';
-var BussesList = require('../../assets/busses.json');
+import { BusService } from '../bus.service';
 
 @Component({
   selector: 'app-bus-list',
@@ -9,15 +9,23 @@ var BussesList = require('../../assets/busses.json');
 })
 export class BusListComponent implements OnInit {
 
-  searchText: String = "";
-  busses: Bus[] = BussesList;
+  searchText = '';
+  buses: Bus[];
 
-  constructor() {
+  constructor(private busService: BusService) {
   }
 
   ngOnInit() {
+    this.getBuses();
   }
-  
+
+  getBuses(): void {
+    this.busService.getBuses()
+        .subscribe(buses => {
+            this.buses = buses;
+        });
+  }
+
   onKey(event: any) { // without type info
     this.searchText = event.target.value;
   }
