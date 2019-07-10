@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { FilterPipe} from './filter.pipe';
 import { BusListComponent } from './bus-list/bus-list.component';
 import { MessageComponent } from './message/message.component';
+import { BusesNowComponent } from './buses-now/buses-now.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterPipe,
     BusListComponent,
-    MessageComponent
+    MessageComponent,
+    BusesNowComponent
   ],
   imports: [
     BrowserModule,
