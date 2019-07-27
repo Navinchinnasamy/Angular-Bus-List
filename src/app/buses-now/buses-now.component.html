@@ -1,7 +1,9 @@
 <h3>
   Current Time: <span id="crnt-time">{{currentTime}}</span>
 </h3>
+<h4>Buses Available Now</h4>
 <div class="row">
+	<div *ngIf="!shownow" class="col-sm-12">No Buses Available Now.</div>
 	<div *ngFor="let bn of busesnow" class="card flex-row flex-wrap col-sm-2 m-2">
 		<div class="card-header border-0">
 			<img alt="Bus" class="busicon" src="assets/images/{{ bn.icon }}">

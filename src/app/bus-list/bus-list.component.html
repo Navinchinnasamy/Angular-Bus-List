@@ -1,20 +1,21 @@
+<h4>All Buses List</h4>
 <div class="row">
-	<div class="col-sm-12">
-		<input (keyup)="onKey($event)" class="form-control" id="bus-filter" placeholder="search text goes here"/>
-	</div>
+    <div class="col-sm-12">
+        <input (keyup)="onKey($event)" class="form-control" id="bus-filter" placeholder="search text goes here"/>
+    </div>
 </div>
 <div class="row">
-	<div *ngFor="let b of buses | filter : searchText" class="card flex-row flex-wrap col-sm-2 m-2">
-		<div class="card-header border-0">
-			<img alt="Bus" class="busicon" src="assets/images/{{ b.icon }}">
-		</div>
-		<div class="card-block px-2">
-			<h4 class="card-title">{{ b.bus }}</h4>
-			<p class="card-text">{{ b.timing }}</p>
-		</div>
-		<div class="w-100"></div>
-		<div class="card-footer w-100 text-muted">
-			{{ b.direction }}
-		</div>
-	</div>
+    <div *ngFor="let b of buses | filter : searchText" class="card flex-row flex-wrap col-sm-2 m-2">
+        <div class="card-header border-0">
+            <img alt="Bus" class="busicon" src="assets/images/{{ b.icon }}">
+        </div>
+        <div class="card-block px-2">
+            <h4 class="card-title">{{ b.bus }}</h4>
+            <p class="card-text">{{ b.timing }}</p>
+        </div>
+        <div class="w-100"></div>
+        <div class="card-footer w-100 text-muted">
+            {{ b.direction }}
+        </div>
+    </div>
 </div>
